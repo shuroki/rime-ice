@@ -1,20 +1,46 @@
 patch:
   style:
     color_scheme: "pronhub" # 皮肤
-    inline_preedit: false                   # 双行竖排
-    font_face: "JetBrainsMono Nerd Font"      # 候选词字体
-    font_point: 12                          # 候选字词大小
-  
-  preset_color_schemes:
+    inline_preedit: false                   # 编码行内嵌(编码显示在光标处)
+    font_face: "JetBrainsMono Nerd Font"   # 候选词字体
+    font_point: 12                         # 候选字词大小
+    border_height: 8 # 边框高度
+    border_width: 0 # 整体窗口左右内边距
+    display_tray_icon: false
+    label_format: "%s." # 序号格式 (%s 为序号)
+    layout:
+      min_width: 60 # 候选框最小宽度
+      border: 4 # 候选框的边框粗细
+      corner_radius: 4 # 候选窗口圆角半径
+      round_corner: 4 # 候选字圆角半径
+      margin_x: 8
+      margin_y: 8
+      spacing: 16 # 候选词与输入码之间的间距
+      candidate_spacing: 1 # 各个候选词之间的间距
+      hilite_spacing: 8 # 序号与候选词之间的间距
+      hilite_padding: 1 # 候选词内边距
+
+  "preset_color_schemes/+":
     pronhub:
       name: pronhub
-      author: 作者
-      back_color: 0x000000
-      border_color: 0xFFFFFF
-      text_color: 0xFFFFFF
-      hilited_text_color: 0x000000
-      hilited_back_color: 0x009BFF
-      hilited_candidate_text_color: 0x000000
-      hilited_candidate_back_color: 0x009BFF
-      candidate_text_color: 0xFFFFFF
-      comment_text_color: 0xFFFFFF
+      color_format: argb # 配色使用argb格式
+
+      # 全局
+      back_color: 0x000000 # 背景色
+      border_color: 0x000000 # 边框色
+
+      # 输入码
+      hilited_back_color: 0xFF9900 # 输入码内选区域 背景色
+      hilited_text_color: 0x000000 # 输入码内选区域 文本色
+      text_color: 0xFFFFFF # 输入码文本色
+      
+      # 候选项
+      label_color: 0xFFFFFF # 序号色
+      candidate_text_color: 0xFFFFFF # 候选项 文本色
+      comment_text_color: 0x333333 # 候选项 注释 文本色
+
+      # 激活候选项
+      hilited_candidate_back_color: 0xFF9900 # 激活候选项背景色
+      hilited_label_color: 0x000000 # 激活候选项序号文本色
+      hilited_candidate_text_color: 0x000000 # 激活候选项文本色
+      hilited_comment_text_color: 0x333333 # 激活候选项注释文本色
