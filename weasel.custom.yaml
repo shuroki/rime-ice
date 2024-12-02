@@ -1,0 +1,6 @@
+patch:
+  style:
+    color_scheme: "youtube" # 皮肤
+    inline_preedit: false                   # 双行竖排
+    font_face: "JetBrainsMono Nerd Font"      # 候选词字体
+    font_point: 12                          # 候选字词大小
